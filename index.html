@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>AI Tourist Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+   <header>
+    <h1>AI Tourist Assistant</h1>
+    <p>Personalised Singapore Travel Recommendations</p>
+</header>
+
+<div class="container">
+    <!-- Your form and results go here -->
+</div>
+}
+
+header {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.score {
+    background: #e0f2fe;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+    <h1>AI Tourist Assistant</h1>
+    <p>Select your preferences:</p>
+    <form id="preferencesForm">
+        <label>Type of Activity:</label><br>
+        <input type="checkbox" name="type" value="Nature"> Nature
+        <input type="checkbox" name="type" value="Cultural"> Cultural
+        <input type="checkbox" name="type" value="Adventure"> Adventure
+        <input type="checkbox" name="type" value="Food"> Food
+        <br><br>
+        <label>Budget:</label>
+        <select name="budget">
+            <option value="low">Low $</option>
+            <option value="medium">Medium $$</option>
+            <option value="high">High $$$</option>
+        </select><br><br>
+        <label>Trip Duration:</label>
+        <select name="duration">
+            <option value="short">1–3 hours</option>
+            <option value="halfday">Half day</option>
+            <option value="fullday">Full day</option>
+        </select><br><br>
+        <button type="button" onclick="getRecommendations(); ">Get Recommendations</button>
+    </form>
+
+    <h2>Recommendations:</h2>
+    <div id="results"></div>
+
+    <h2>AI Suggestions:</h2>
+    <div id="aiResults"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
